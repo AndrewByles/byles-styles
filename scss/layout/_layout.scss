@@ -1,0 +1,27 @@
+.layout-container { 
+    margin: 0 auto;
+    max-width: 1024px;
+    padding: 10px;
+}
+.columns {
+    display: flex;
+    flex-wrap: wrap;
+    
+    & > * {
+        flex: 1 1 auto;
+        width: 100%;
+        padding: 10px;
+
+        &:first-child,
+        &:last-child { padding: 10px 0; }
+    }
+
+    @media (min-width: $two-col-layout-min) {
+        & > * { width: auto; }
+        & > .col-25 { width: 25%; }
+        & > .col-33 { width: 33.333%; }
+        & > .col-50 { width: 50%; }
+        & > .col-66 { width: 66.666%; }
+        & > .col-100 { width: 100%; }
+    }
+}

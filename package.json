@@ -8,7 +8,8 @@
     "scss:build": "node-sass scss -o dist --output-style compressed",
     "js:watch": "babel ./js --out-file public/byles-styles.js -w --source-maps",
     "js:build": "babel ./js --out-file dist/byles-styles.js",
-    "start": "concurrently --kill-others \"node server.js --watch public\" \"npm run scss:watch\" \"npm run js:watch\""
+    "start": "concurrently --kill-others \"node server.js --watch public\" \"npm run scss:watch\" \"npm run js:watch\"",
+    "build": "npm run scss:build && npm run js:build"
   },
   "repository": {
     "type": "git",
