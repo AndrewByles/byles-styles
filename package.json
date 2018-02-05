@@ -1,0 +1,35 @@
+{
+  "name": "byles-styles",
+  "version": "1.0.0",
+  "description": "Byles Style Guide",
+  "main": "index.js",
+  "scripts": {
+    "dev:watch": "npm run dev:build && node-sass -w src -o dev --source-map dev",
+    "dev:build": "node-sass src -o dev --source-map dev",
+    "build": "node-sass src -o dist --output-style compressed",
+    "start": "npm run dev:build && node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndrewByles/byles-styles.git"
+  },
+  "keywords": [
+    "style",
+    "guide",
+    "design",
+    "sass",
+    "css"
+  ],
+  "author": "Andrew Byles",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AndrewByles/byles-styles/issues"
+  },
+  "homepage": "https://github.com/AndrewByles/byles-styles#readme",
+  "devDependencies": {
+    "express": "^4.16.2",
+    "node-sass": "^4.7.2",
+    "node-sass-middleware": "^0.11.0",
+    "nodemon": "^1.14.12"
+  }
+}
