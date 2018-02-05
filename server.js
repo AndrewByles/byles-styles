@@ -8,5 +8,5 @@ app.use(sassMiddleware({
     dest: 'dev',
     debug: true,
 }));
-app.use(express.static('dev'));
-app.listen(3000, (req, res) => console.log('Example app listening on port 3000!'))
+app.use(express.static('./'))
+app.listen(3000, (req, res) => console.log('\x1b[33m','Listening on port 3000'));
