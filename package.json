@@ -4,8 +4,8 @@
   "description": "Byles Style Guide",
   "main": "index.js",
   "scripts": {
-    "dev:watch": "npm run dev:build && node-sass -w src -o dev --source-map dev",
-    "dev:build": "node-sass src -o dev --source-map dev",
+    "dev:watch": "npm run dev:build && node-sass -w src -o public --source-map public",
+    "dev:build": "node-sass src -o public --source-map public",
     "build": "node-sass src -o dist --output-style compressed",
     "start": "npm run dev:build && node server.js"
   },

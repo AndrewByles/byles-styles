@@ -5,8 +5,8 @@ var app = express();
 
 app.use(sassMiddleware({
     src: 'src',
-    dest: 'dev',
+    dest: 'public',
     debug: true,
 }));
-app.use(express.static('./'))
+app.use(express.static('public'))
 app.listen(3000, (req, res) => console.log('\x1b[33m','Listening on port 3000'));
