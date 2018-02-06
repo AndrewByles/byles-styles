@@ -1,0 +1,11 @@
+.layout-container { 
+    margin: 0 auto;
+    max-width: 1020px;
+    padding: 10px;
+}
+
+.content-container {
+    padding-bottom: 30px;
+    
+    @include clearfix;
+}
