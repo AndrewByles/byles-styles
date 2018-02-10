@@ -1,7 +1,11 @@
 .layout-container { 
     margin: 0 auto;
-    max-width: 1020px;
+    max-width: 1000px;
     padding: 10px;
+
+    @media (min-width: $two-col-layout-min) {
+        padding: 20px;
+    }
 }
 
 .content-container {

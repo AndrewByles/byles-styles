@@ -6,10 +6,8 @@
   "scripts": {
     "scss:watch": "node-sass scss -o public && node-sass -w scss -o public --source-map public",
     "scss:build": "node-sass scss -o dist --output-style compressed",
-    "js:watch": "babel ./js --out-file public/byles-styles.js -w --source-maps",
-    "js:build": "babel ./js --out-file dist/byles-styles.js",
-    "start": "concurrently --kill-others \"node server.js --watch public\" \"npm run scss:watch\" \"npm run js:watch\"",
-    "build": "npm run scss:build && npm run js:build"
+    "start": "concurrently --kill-others \"node index.js --watch public\" \"npm run scss:watch\" \"rollup -c -w\"",
+    "build": "npm run scss:build && rollup -c --environment build"
   },
   "repository": {
     "type": "git",
@@ -30,9 +28,17 @@
   "homepage": "https://github.com/AndrewByles/byles-styles#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
+    "babel-plugin-external-helpers": "^6.22.0",
     "babel-preset-env": "^1.6.1",
     "concurrently": "^3.5.1",
+    "eslint": "^4.17.0",
     "express": "^4.16.2",
-    "node-sass": "^4.7.2"
+    "node-sass": "^4.7.2",
+    "rollup": "^0.55.3",
+    "rollup-plugin-babel": "^3.0.3",
+    "rollup-plugin-eslint": "^4.0.0",
+    "rollup-plugin-filesize": "^1.5.0",
+    "rollup-plugin-progress": "^0.4.0",
+    "rollup-plugin-uglify": "^3.0.0"
   }
 }
