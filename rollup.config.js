@@ -6,7 +6,7 @@ import eslint from 'rollup-plugin-eslint';
 
 const build = process.env.build || false;
 const config = {
-    input: 'js/index.js',
+    input: 'src/js/index.js',
     output: {
         file: 'dist/byles-styles.min.js',
         format: 'iife'
@@ -27,7 +27,7 @@ const config = {
 };
 
 if (!build) {
-    config.output.file = 'public/byles-styles.js';
+    config.output.file = 'dev/byles-styles.js';
     config.output.sourcemap = true;
 }
 

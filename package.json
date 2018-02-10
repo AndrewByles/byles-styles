@@ -4,9 +4,9 @@
   "description": "Byles Style Guide",
   "main": "index.js",
   "scripts": {
-    "scss:watch": "node-sass scss -o public && node-sass -w scss -o public --source-map public",
-    "scss:build": "node-sass scss -o dist --output-style compressed",
-    "start": "concurrently --kill-others \"node index.js --watch public\" \"npm run scss:watch\" \"rollup -c -w\"",
+    "scss:watch": "node-sass src/scss -o dev && node-sass -w src/scss -o dev --source-map dev",
+    "scss:build": "node-sass src/scss -o dist --output-style compressed",
+    "start": "concurrently --kill-others \"node index.js --watch dev\" \"npm run scss:watch\" \"rollup -c -w\"",
     "build": "npm run scss:build && rollup -c --environment build"
   },
   "repository": {
