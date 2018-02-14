@@ -1,7 +1,9 @@
 {
     "extends": "eslint:recommended",
     "rules": {
-        "no-console": "warn"
+        "no-console": "warn",
+        "semi": [ "error", "always"],
+        "indent": ["error", 4],
     },
     "env": {
         "browser": true

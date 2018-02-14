@@ -1,17 +1,12 @@
-import test from './test';
+import expander from './expand';
 
-const one = 1;
-const two = 2;
-const arr = [1,2,3,4,5];
+class BS {
+    
+    static expand(s) {
+        expander(s);
+        return this;
+    }
 
-const add = (a, b) => {
-  return a + b;
-};
+}
 
-const doubleValues = (arr) => {
-  return arr.map(v => v * 2);
-};
-
-console.log(add(one, two), doubleValues(arr));
-
-test();
+BS.expand();
